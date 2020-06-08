@@ -28,5 +28,20 @@ namespace CSharp_Basics
             return height > width ? ImageMode.LandScape.ToString() : ImageMode.Portrait.ToString();
         }
 
+        public static void SpeedLimit(int speedLimit, int speedOfCar)
+        {
+            if(speedOfCar <= speedLimit)
+                Console.WriteLine("Ok");
+            else
+            {
+                const int aboveSpeedLimit = 5;
+                var demeritPoint = (speedOfCar - speedLimit) / aboveSpeedLimit;
+
+                if (demeritPoint < 12)
+                    Console.WriteLine(demeritPoint + " demerit points incurred.");
+                else
+                    Console.WriteLine("License Suspended.");
+            }
+        }
     }
 }

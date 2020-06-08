@@ -6,15 +6,15 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter Height:");
+            Console.Write("Enter Speed Limit: ");
             
-            var height = Convert.ToInt32(Console.ReadLine());
+            var speedLimit = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter Width:");
+            Console.Write("Enter speed of your car: ");
 
-            var width = Convert.ToInt32(Console.ReadLine());
+            var speedOfCar = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(ConditionalsSolution.LandScapeOrPortrait(height, width));
+            ConditionalsSolution.SpeedLimit(speedLimit, speedOfCar);
         }
     }
 }
