@@ -21,5 +21,15 @@ namespace CSharp_Basics
 
             return string.Empty;
         }
+
+        public static string ReverseNameUsingArray(string name)
+        {
+            var reversedName = name.ToCharArray();
+
+            for (int i = 0; i < reversedName.Length; i++)
+                reversedName[i] = name[name.Length - 1 - i];
+
+            return new string(reversedName);
+        }
     }
 }

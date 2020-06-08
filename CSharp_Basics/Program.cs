@@ -10,26 +10,10 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a name");
-            var exist = true;
-            var names = new List<string>();
-            while (exist)
-            {
-                var name = Console.ReadLine();
-
-                if (!String.IsNullOrWhiteSpace(name))
-                {
-                    names.Add(name);
-                    Console.WriteLine("Enter a different name");
-                }
-                else
-                    exist = false;
-            }
-
-
-            var result = ArraysAndListsSolutions.DisplayFacebookPostInformation(names);
-
-            Console.WriteLine(result);
+            Console.Write("Enter your name:");
+            var name = Console.ReadLine();
+            Console.WriteLine(ArraysAndListsSolutions.ReverseNameUsingArray(name));
+            
         }
     }
 }
