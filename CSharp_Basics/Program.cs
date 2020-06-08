@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Net;
 
@@ -9,16 +10,26 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a series of numbers separated by comma. For e.g. 5,3,8,1,4");
-            var input = Console.ReadLine()?.Split(',');
-            var list = new List<int>();
-            if (input != null)
-                foreach (var num in input)
-                    list.Add(Convert.ToInt32(num));
+            Console.WriteLine("Enter a name");
+            var exist = true;
+            var names = new List<string>();
+            while (exist)
+            {
+                var name = Console.ReadLine();
 
-            Console.WriteLine(LoopsSolutions.ReturnMaximumNumberFromTheList(list));
+                if (!String.IsNullOrWhiteSpace(name))
+                {
+                    names.Add(name);
+                    Console.WriteLine("Enter a different name");
+                }
+                else
+                    exist = false;
+            }
 
 
+            var result = ArraysAndListsSolutions.DisplayFacebookPostInformation(names);
+
+            Console.WriteLine(result);
         }
     }
 }
