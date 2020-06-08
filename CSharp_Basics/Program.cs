@@ -10,10 +10,23 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter your name:");
-            var name = Console.ReadLine();
-            Console.WriteLine(ArraysAndListsSolutions.ReverseNameUsingArray(name));
+            var list = new List<int>();
             
+            for (var i = 1; i <= 5; i++)
+            {
+                Console.Write("Enter 5 numbers:");
+                var input = Convert.ToInt32(Console.ReadLine());
+                if (list.Contains(input))
+                {
+                    Console.WriteLine("Duplicate number: Re-try");
+                    list.Clear();
+                    i = 0;
+                }
+                else
+                    list.Add(input);
+            }
+
+            ArraysAndListsSolutions.SortListOfNumbers(list);
         }
     }
 }

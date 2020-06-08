@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Reflection;
 using System.Text;
 
@@ -30,6 +31,17 @@ namespace CSharp_Basics
                 reversedName[i] = name[name.Length - 1 - i];
 
             return new string(reversedName);
+        }
+
+        public static void SortListOfNumbers(List<int> list)
+        {
+            if(list == null || list.Count == 0)
+                throw new ArgumentNullException(nameof(list),"The list is empty");
+
+            list.Sort();
+
+            foreach(var num in list)
+                Console.WriteLine(num);
         }
     }
 }
