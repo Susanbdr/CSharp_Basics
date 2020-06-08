@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CSharp_Basics.Enum;
 
 namespace CSharp_Basics
 {
@@ -21,5 +22,11 @@ namespace CSharp_Basics
             
             return input1 > input2 ? input1 : input2;
         }
+
+        public static string LandScapeOrPortrait(int height, int width)
+        {
+            return height > width ? ImageMode.LandScape.ToString() : ImageMode.Portrait.ToString();
+        }
+
     }
 }

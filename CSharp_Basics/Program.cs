@@ -6,15 +6,15 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter 1st number:");
+            Console.Write("Enter Height:");
             
-            var input1 = Convert.ToInt32(Console.ReadLine());
+            var height = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter 2nd number:");
+            Console.Write("Enter Width:");
 
-            var input2 = Convert.ToInt32(Console.ReadLine());
+            var width = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(ConditionalsSolution.ReturnMaxOfTwoNumbers(input1, input2));
+            Console.WriteLine(ConditionalsSolution.LandScapeOrPortrait(height, width));
         }
     }
 }
