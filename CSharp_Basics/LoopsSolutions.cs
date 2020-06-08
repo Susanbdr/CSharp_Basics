@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Xsl;
 
 namespace CSharp_Basics
 {
@@ -15,6 +16,15 @@ namespace CSharp_Basics
                     count++;
             
             return count;
+        }
+
+        public static int CalculateSumOfEnteredNumbers(List<int> list)
+        {
+            var sum = 0;
+            foreach (var num in list)
+                sum += num;
+
+            return sum;
         }
     }
 }
