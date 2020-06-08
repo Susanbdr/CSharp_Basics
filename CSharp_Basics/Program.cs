@@ -10,10 +10,7 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            var list = ArraysAndListsSolutions.DisplayUniqueNumbers();
-
-            foreach(var uniqueNum in list)
-                Console.WriteLine(uniqueNum);
+            ArraysAndListsSolutions.Display3SmallestNumbers();
 
 
         }

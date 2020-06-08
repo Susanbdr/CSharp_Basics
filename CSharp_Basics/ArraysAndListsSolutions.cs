@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
 using System.Text;
+using System.Threading.Channels;
 
 namespace CSharp_Basics
 {
@@ -68,6 +69,32 @@ namespace CSharp_Basics
             }
 
             return list;
+        }
+
+        public static void Display3SmallestNumbers()
+        {
+            var isValid = true;
+            while (isValid)
+            {
+                Console.WriteLine("Enter a list of comma separated numbers (e.g 5, 1, 9, 2, 10)");
+                var input = Console.ReadLine()?.Split(',');
+                var list = new List<int>();
+                if(input != null && (input.Length <= 0 || input.Length <= 3))
+                    Console.WriteLine("Invalid List: Try-again");
+                else if (input != null)
+                {
+                    foreach (var item in input)
+                        list.Add(Convert.ToInt32(item));
+
+                    list.Sort();
+
+                    for (int i = 0; i < 3; i++)
+                        Console.WriteLine(list[i]);
+                    isValid = false;
+                }
+            }
+               
+
         }
     }
 }
