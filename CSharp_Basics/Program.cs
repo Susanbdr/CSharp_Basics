@@ -7,20 +7,10 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number or \"ok\" to exit");
-            var list = new List<int>();
+            Console.WriteLine("Enter a number to find out the factorial of the number");
+            var fact = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(LoopsSolutions.FactorialUsingRecursion(fact));
 
-            for (int i = 0; i <= 20; i++)
-            {
-                var input = Console.ReadLine();
-                if (input == "ok")
-                {
-                    Console.WriteLine(LoopsSolutions.CalculateSumOfEnteredNumbers(list));
-                    break;
-                }
-
-                list.Add(Convert.ToInt32(input));
-            }
         }
     }
 }

@@ -26,5 +26,23 @@ namespace CSharp_Basics
 
             return sum;
         }
+
+        public static int FactorialUsingIteration(int fact)
+        {
+            var result = 1;
+
+            for (int i = fact; i > 1; i--)
+                result *= i;
+
+            return result;
+        }
+
+        public static int FactorialUsingRecursion(int fact)
+        {
+            if (fact == 0)
+                return 1;
+
+            return fact * FactorialUsingRecursion(fact - 1);
+        }
     }
 }
