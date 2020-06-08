@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 
 namespace CSharp_Basics
 {
@@ -7,24 +9,16 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number to get. You get 4 tries");
+            Console.WriteLine("Enter a series of numbers separated by comma. For e.g. 5,3,8,1,4");
+            var input = Console.ReadLine()?.Split(',');
+            var list = new List<int>();
+            if (input != null)
+                foreach (var num in input)
+                    list.Add(Convert.ToInt32(num));
 
-            for (var i = 1; i <= 4; i++)
-            {
-                var userInput = Convert.ToInt32(Console.ReadLine());
-                var result = LoopsSolutions.PickRandomNumber(userInput);
+            Console.WriteLine(LoopsSolutions.ReturnMaximumNumberFromTheList(list));
 
-                if (result == "\"You won\"")
-                {
-                    Console.WriteLine(result);
-                    break;
-                }
 
-                Console.WriteLine("Try again.");
-
-            }
-
-           
         }
     }
 }

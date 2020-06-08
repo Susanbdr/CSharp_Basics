@@ -50,5 +50,16 @@ namespace CSharp_Basics
 
             return numbers.Contains(userInput) ? "\"You won\"" : "\"You lost\"";
         }
+
+        public static int ReturnMaximumNumberFromTheList(List<int> list)
+        {
+            var max = 0;
+
+            foreach(var num in list)
+                if (num > max)
+                    max = num;
+
+            return max;
+        }
     }
 }
