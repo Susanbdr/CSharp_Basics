@@ -15,5 +15,11 @@ namespace CSharp_Basics
             else
                 Console.WriteLine("Valid");
         }
+
+        public static int ReturnMaxOfTwoNumbers(int input1, int input2)
+        {
+            
+            return input1 > input2 ? input1 : input2;
+        }
     }
 }
