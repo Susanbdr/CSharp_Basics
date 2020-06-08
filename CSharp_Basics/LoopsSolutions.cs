@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml.Xsl;
+
 
 namespace CSharp_Basics
 {
@@ -43,6 +42,13 @@ namespace CSharp_Basics
                 return 1;
 
             return fact * FactorialUsingRecursion(fact - 1);
+        }
+
+        public static string PickRandomNumber(int userInput)
+        {
+            var numbers = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+            return numbers.Contains(userInput) ? "\"You won\"" : "\"You lost\"";
         }
     }
 }
