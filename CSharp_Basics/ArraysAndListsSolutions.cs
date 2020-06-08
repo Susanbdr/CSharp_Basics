@@ -43,5 +43,31 @@ namespace CSharp_Basics
             foreach(var num in list)
                 Console.WriteLine(num);
         }
+
+        public static List<int> DisplayUniqueNumbers()
+        {
+            var exit = true;
+            var list = new List<int>();
+            while (exit)
+            {
+                Console.WriteLine("Enter a number or type \"Quit\" to exit.");
+                var input = Console.ReadLine();
+                
+                if (input == "Quit" || input == "quit")
+                {
+                    exit = false;
+                }
+                else
+                {
+                    var inputToInt = Convert.ToInt32(input);
+                    if (!list.Contains(inputToInt))
+                        list.Add(inputToInt);
+                    else
+                        list.Remove(inputToInt);
+                }
+            }
+
+            return list;
+        }
     }
 }
