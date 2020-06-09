@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Buffers;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Threading.Channels;
 
 namespace CSharp_Basics
 {
