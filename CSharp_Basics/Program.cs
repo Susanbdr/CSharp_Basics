@@ -13,10 +13,10 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a few words separated by a space. ");
+            Console.WriteLine("Enter an English word. ");
             var input = Console.ReadLine();
 
-            var result = WorkingWithTextSolutions.ConvertToPascalCase(input);
+            var result = WorkingWithTextSolutions.CountTheNumberOfVowels(input);
             Console.WriteLine(result);
 
 

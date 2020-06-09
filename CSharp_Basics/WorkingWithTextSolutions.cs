@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using CSharp_Basics.CustomExceptions;
 
 namespace CSharp_Basics
@@ -79,6 +80,22 @@ namespace CSharp_Basics
                 pascalCase += char.ToUpper(word[0]) + word.ToLower().Substring(1);
 
             return pascalCase;
+        }
+
+        public static int CountTheNumberOfVowels(string word)
+        {
+            if (string.IsNullOrWhiteSpace(word))
+                return 0;
+
+            var counter = 0;
+
+            List<char> vowels = new List<char>(new char[] { 'a', 'e', 'i', 'o', 'u' });
+            List<char> a = new List<char>();
+            foreach(var vowel in word.ToLower())
+                if (vowels.Contains(vowel))
+                    counter++;
+            
+            return counter;
         }
 
 
