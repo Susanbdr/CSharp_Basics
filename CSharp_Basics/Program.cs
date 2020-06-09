@@ -13,19 +13,13 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter few numbers separated by a hyphen");
+            Console.WriteLine("Enter a time value in the 24-hour time format (e.g. 19:00). ");
             var input = Console.ReadLine();
 
-            if (String.IsNullOrWhiteSpace(input))
-                return;
-
-            var list = new List<int>();
-
-            foreach(var number in input.Split('-'))
-                list.Add(Convert.ToInt32(number));
-
-            var result = WorkingWithTextSolutions.CheckDuplicateIfAny(list);
+            var result = WorkingWithTextSolutions.CheckTheTimeIsValid(input);
             Console.WriteLine(result);
+
+
         }
     }
 }
