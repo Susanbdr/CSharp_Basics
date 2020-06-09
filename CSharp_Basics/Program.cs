@@ -13,10 +13,10 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a time value in the 24-hour time format (e.g. 19:00). ");
+            Console.WriteLine("Enter a few words separated by a space. ");
             var input = Console.ReadLine();
 
-            var result = WorkingWithTextSolutions.CheckTheTimeIsValid(input);
+            var result = WorkingWithTextSolutions.ConvertToPascalCase(input);
             Console.WriteLine(result);
 
 

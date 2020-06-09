@@ -67,6 +67,20 @@ namespace CSharp_Basics
             return "";
         }
 
+        public static string ConvertToPascalCase(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                return "";
+            
+            var sentence = input.Split(' ');
+            var pascalCase = "";
+
+            foreach (var word in sentence)
+                pascalCase += char.ToUpper(word[0]) + word.ToLower().Substring(1);
+
+            return pascalCase;
+        }
+
 
     }
 }
