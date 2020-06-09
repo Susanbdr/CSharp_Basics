@@ -19,5 +19,18 @@ namespace CSharp_Basics
 
             return "Consecutive";
         }
+
+        public static string CheckDuplicateIfAny(List<int> list)
+        {
+
+            var list2 = new List<int>();
+            foreach (var num in list)
+                if (list2.Contains(num))
+                    return "Duplicate";
+                else
+                    list2.Add(num);
+
+            return string.Empty;
+        }
     }
 }

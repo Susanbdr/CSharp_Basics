@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Threading.Channels;
 
 namespace CSharp_Basics
@@ -12,15 +13,18 @@ namespace CSharp_Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter few numbers separated by a hyphen. E.g. \"5-6-7-8-9\"");
-            var numbers = Console.ReadLine()?.Split('-');
+            Console.WriteLine("Enter few numbers separated by a hyphen");
+            var input = Console.ReadLine();
+
+            if (String.IsNullOrWhiteSpace(input))
+                return;
+
             var list = new List<int>();
 
-            if (numbers != null)
-                foreach (var number in numbers)
-                    list.Add(Convert.ToInt32(number));
+            foreach(var number in input.Split('-'))
+                list.Add(Convert.ToInt32(number));
 
-            var result = WorkingWithTextSolutions.CheckIfListIsConsecutive(list);
+            var result = WorkingWithTextSolutions.CheckDuplicateIfAny(list);
             Console.WriteLine(result);
         }
     }
